@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>John Doe</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile">
+                <div class="border">
+                    <img src="https://images.pexels.com/photos/593655/pexels-photo-593655.jpeg?cs=srgb&dl=pexels-jovana-nesic-593655.jpg&fm=jpg"
+                        alt="John Doe">
+                </div>
+            </div>
+            <div class="header-content">
+                <h1>John Doe</h1>
+                <!-- <div> -->
+                <p>Bio goes here</p>
+                <div class="location">
+                    <img src="./location.svg">
+                    <p> Orlando</p>
+                </div>
+                <!-- </div> -->
+                <div>
+                    <a href="https://twitter.com/john_doe">Twitter: https://twitter.com/pratik98</a>
+                </div>
+            </div>
+        </div>
+        <div class="github_profile">
+            <!-- <i class="fas fa-link-simple"></i> -->
+            <img src="./links.svg">
+            <a href="https://github.com/john_doe">GitHub Profile</a>
+            <div class="box-dropdown" >
+                
+                <select class="noOfItemPerPage" id="itemsPerPageSelect" onchange="updateItemsPerPage()">
+                  <!-- Generate options dynamically -->
+                  <option value="" disabled selected>Repo per page</option>
+                  <script>
+                    for (let i = 10; i <= 100; i += 10) {
+                      const option = document.createElement("option");
+                      option.value = i;
+                      option.textContent = i;
+                      document.getElementById('itemsPerPageSelect').appendChild(option);
+                    }
+                  </script>
+                </select>
+            </div>
+        </div>
+        <div class="content" id="repoContainer">
+        </div>
+        <div class="page-box-container">
+
+            <div class="pagination" id="pagination">
+                <div class="page-box" id="pageBox"></div>
+            </div>
+            <div class="prev_next_btn">
+
+                <button class="prev-next-btns" id="prevBtn" onclick="changePage(-1)"> ← Older</button>
+
+                <button class="prev-next-btns" id="nextBtn" onclick="changePage(1)">Newer →</button>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

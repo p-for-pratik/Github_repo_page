@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+body {
+	font-family: Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+:root{
+	--grey: grey;
+}
+
+.container {
+    border: 2px solid var(--grey);
+	border-radius: 3px;
+    width: 52%;
+	gap: 1em;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 1em 2em;
+	padding-bottom: 2em;
+}
+
+
+.header {
+    display: flex;
+	gap: 4em;
+	padding-left: 1em;
+}
+.profile{
+	border: 2px solid #7d7777;
+	border-radius: 50%;
+}
+.border{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	box-shadow: 0 0 10px rgba(176, 76, 76, 0.1);
+}
+.header-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.header h1 {
+	margin: 0;
+	line-height: 1;
+}
+.header div p {
+	margin: 0;
+	font-size: 0.9em;
+}
+.header img {
+    border-radius: 50%;
+    max-width: 150px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0px;
+}
+
+.header div a {
+    text-decoration: none;
+    color: #333;
+	font-size: 0.9em;
+}
+.location{
+	display: flex;
+	gap: 0.6em;
+	align-items: flex-end;
+}
+.location p{
+	line-height: 1;
+}
+.location img{
+	height: 18px;
+}
+.header div a:hover {
+    color: #007bff;
+}
+.noOfItemPerPage{
+	border: 2px solid red;
+}
+
+
+/* Gihub profile link  */
+
+.github_profile {
+    display: flex;
+    align-items: center;
+	font-size: 0.9em;
+	position: relative;
+	/* border: 2px solid red; */
+}
+
+.github_profile img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.github_profile a {
+    text-decoration: none;
+    color: #333;
+    margin-left: .7vw;
+}
+
+.github_profile a:hover {
+    color: #007bff;
+}
+
+
+/* contains all repo */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+}
+.content h2 {
+	margin: 0;
+}
+
+.content p {
+	margin: 0;
+}
+
+/* Repo card */
+
+.repo {
+	width: 46%;
+	margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 2px solid #7d7777;
+    padding: 0.5em 1em;
+	border-radius: 5px;
+}
+.repo h2{
+	color: #528ece;
+    margin:0;
+}
+.repo p{
+	line-height: 2;
+	font-size: 0.9em;
+}
+.tags{
+	margin-left: -2%;
+}
+.tag{
+	margin: 2%;
+	padding: 2%;
+	border-radius: 7%;
+	border: none;
+	background-color: #528ece;
+    color: #fff;
+	font-weight: bold;
+}
+
+
+/* pagination and prev next buttons */
+.page-box-container {
+    text-align: center;
+	width: max-content;
+	margin: auto;
+}
+.page-box {
+    display: inline-block;
+	/* border: 2px solid red; */
+}
+
+
+/* page no. buttons  */
+
+.pagination {
+	/* text-align: center; */
+}
+.pagination a {
+    text-decoration: none;
+    padding: 8px 12px;
+	line-height: 1;
+    margin: 0;
+    border: 1px solid #ccc;
+	border-left: none;	
+    color: #528ece;
+	/* border: 2px solid red; */
+}
+.pagination a.active {
+	background-color: #528ece;
+    color: #fff;
+}
+
+/* buttons in pagination */
+
+.pagination button {
+	
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    /* border-top: 2px solid #ccc; */
+	cursor: pointer;
+	background-color: #ffffff;
+	/* border: 2px solid red; */
+}
+.Prev_btn{
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-left: 1px solid #ccc !important;
+}
+.Next_btn{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	
+}
+
+
+/* buttons below pagination */
+
+.prev_next_btn{
+	display: flex;
+	justify-content: space-between;
+    margin-top: 2em;
+}
+
+.prev_next_btn button,.noOfItemPerPage{
+	border-radius: 100px;
+    border: 2px solid #ccc;
+	width: 10em;
+	font-weight: 500;
+	padding: 0.8em;
+	color: #848586;
+	background-color: #ffffff;
+}
+.prev_next_btn button:hover{
+	cursor: pointer;
+	color: #528ece;
+}
+.prev_next_btn button:active{
+	cursor: pointer;
+	color: #3c93f0;
+}
+.box-dropdown{
+	/* position: absolute;
+	right: 0;
+	top: 0; */
+	/* border: 2px solid red; */
+	margin-left: auto;
+}
